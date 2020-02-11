@@ -3,7 +3,6 @@ import { observer, inject } from 'mobx-react';
 import AppBarMenu from '../AppBarMenu';
 import { EDITOR_STORE, EditorStoreProp } from '../../stores';
 import packageJSON from '../../../package.json';
-import GitHubButton from 'github-buttons/dist/react';
 import {
   AppBar as MaterialAppBar,
   Toolbar,
@@ -35,12 +34,6 @@ class AppBar extends Component<EditorStoreProp & WithStyles<typeof styles>> {
           <Typography color="inherit" className={classes.version}>
             v {packageJSON.version}
           </Typography>
-          <GitHubButton
-            href="https://github.com/koreezgames/phaser3-particle-editor"
-            data-icon="octicon-star"
-            data-text="Star"
-            data-show-count={true}
-          />
         </Toolbar>
       </MaterialAppBar>
     );
